@@ -1,0 +1,13 @@
+#PATH to all data
+data_dir: /tmp/data
+
+########## IMPORT DATA TO CONTENTFUL ##########
+
+## EXPORTED XML FILE FROM WORDPRESS
+wordpress_xml_path: wordpress_settings/wordpress.xml
+
+## CONVERT CONTENTFUL MODEL TO CONTENTFUL IMPORT STRUCTURE
+content_model_json: wordpress_settings/contentful_model.json
+converted_model_dir: wordpress_settings/contentful_structure.json
+
+contentful_structure_dir: wordpress_settings/default_contentful_structure.json
