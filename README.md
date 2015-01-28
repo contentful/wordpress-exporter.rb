@@ -14,10 +14,10 @@ The following content will be extracted:
 ## Installation
 
 ```bash
-gem install wordpress-adapter
+gem install wordpress-exporter
 ```
 
-This will install the `wordpress-adapter` executable on your system.
+This will install the `wordpress-exporter` executable on your system.
 
 
 ## Setup
