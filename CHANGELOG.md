@@ -1,5 +1,5 @@
 # Change Log
-## Unreleased
+## 0.0.2
 ### Fixed
 * Issues with `attachment_description`
 
