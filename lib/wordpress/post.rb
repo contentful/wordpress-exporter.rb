@@ -54,13 +54,12 @@ module Contentful
         end
 
         def basic_post_data(xml_post)
-          created = Date.strptime(created_at(xml_post))
           {
             id: post_id(xml_post),
             title: title(xml_post),
             wordpress_url: url(xml_post),
             content: content(xml_post),
-            created_at: created
+            created_at: created_at(xml_post)
           }
         end
 
@@ -86,7 +85,12 @@ module Contentful
         end
 
         def created_at(xml_post)
-          xml_post.xpath('wp:post_date').text
+          ['wp:post_date', 'wp:post_date_gmt'].each do |date_field|
+            date_string = xml_post.xpath(date_field).text
+            return Date.strptime(date_string) unless date_string.empty?
+          end
+          output_logger.warn "Post didn't have Creation Date - defaulting to #{Date.today}"
+          Date.today
         end
       end
     end
