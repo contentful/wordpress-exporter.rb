@@ -89,7 +89,7 @@ module Contentful
             date_string = xml_post.xpath(date_field).text
             return Date.strptime(date_string) unless date_string.empty?
           end
-          output_logger.warn "Post didn't have Creation Date - defaulting to #{Date.today}"
+          output_logger.warn "Post <#{post_id(xml_post)}> didn't have Creation Date - defaulting to #{Date.today}"
           Date.today
         end
       end

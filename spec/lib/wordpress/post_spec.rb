@@ -35,7 +35,7 @@ module Contentful
             xml_doc = Nokogiri::XML(File.open('spec/fixtures/wordpress_empty_dates.xml'))
             post_xml = xml_doc.xpath('//item').to_a.first
 
-            expect_any_instance_of(Logger).to receive(:warn).with("Post didn't have Creation Date - defaulting to #{Date.today}")
+            expect_any_instance_of(Logger).to receive(:warn).with("Post <post_1> didn't have Creation Date - defaulting to #{Date.today}")
 
             post = Post.new(xml_doc, @settings).send(:extract_data, post_xml)
 
