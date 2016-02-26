@@ -45,6 +45,10 @@ module Contentful
           PostAttachment.new(xml_post, settings).attachment_extractor
         end
 
+        def author(xml_post)
+          PostAuthor.new(xml, xml_post, settings).author_extractor
+        end
+
         def tags(xml_post)
           PostCategoryDomain.new(xml, xml_post, settings).extract_tags
         end
@@ -67,6 +71,7 @@ module Contentful
           attachment = attachment(xml_post)
           tags = link_entry(tags(xml_post))
           categories = link_entry(categories(xml_post))
+          post_entry.merge!(author: link_entry(author(xml_post)))
           post_entry.merge!(attachment: link_asset(attachment)) unless attachment.nil?
           post_entry.merge!(tags: tags) unless tags.empty?
           post_entry.merge!(categories: categories) unless categories.empty?

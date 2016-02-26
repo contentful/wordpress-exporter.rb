@@ -4,6 +4,10 @@
   "wordpress_url": "http://szpryc.wordpress.com/?p=9",
   "content": "asd asd",
   "created_at": "2014-11-26",
+  "author": {
+    "id": "author_10",
+    "type": "Entry"
+  },
   "categories": [
     {
       "id": "category_14786",

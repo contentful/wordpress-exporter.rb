@@ -5,6 +5,12 @@
     "description": null,
     "displayField": "title",
     "fields": {
+      "Authors": {
+        "id": "authors",
+        "type": "Array",
+        "link_type": "Entry",
+        "link": "Link"
+      },
       "Posts": {
         "id": "posts",
         "type": "Array",
@@ -26,6 +32,19 @@
       }
     }
   },
+  "Author": {
+    "id": "author",
+    "name": "Author",
+    "description": null,
+    "displayField": "display_name",
+    "fields": {
+      "email": "Text",
+      "display_name": "Text",
+      "first_name": "Text",
+      "last_name": "Text",
+      "wordpress_login": "Text"
+    }
+  },
   "Tag": {
     "id": "tag",
     "name": "Tag",
@@ -44,6 +63,11 @@
     "fields": {
       "title": "Text",
       "content": "Text",
+      "Author": {
+        "id": "author",
+        "type": "Link",
+        "link_type": "Entry"
+      },
       "Tags": {
         "id": "tags",
         "type": "Array",

@@ -4,11 +4,13 @@ require 'fileutils'
 require 'json'
 
 require_relative 'blog'
+require_relative 'author'
 require_relative 'post'
 require_relative 'category'
 require_relative 'tag'
 require_relative 'post_category_domain'
 require_relative 'post_attachment'
+require_relative 'post_author'
 
 module Contentful
   module Exporter
