@@ -17,10 +17,16 @@ module Contentful
           extract_blog
         end
 
-        def link_entry(entries)
-          entries.each do |entry|
+        def link_entry(entry_or_entries)
+          link = ->(entry) {
             entry.keep_if { |key, _v| key if key == :id }
             entry.merge!(type: 'Entry')
+          }
+
+          if entry_or_entries.is_a? Array
+            entry_or_entries.each(&link)
+          else
+            link.call(entry_or_entries)
           end
         end
 
@@ -56,10 +62,15 @@ module Contentful
           {
             id: 'blog_id',
             title: title,
+            authors: link_entry(authors),
             posts: link_entry(posts),
             categories: link_entry(categories),
             tags: link_entry(tags)
           }
+        end
+
+        def authors
+          Author.new(xml, settings).author_extractor
         end
 
         def posts

@@ -1,6 +1,16 @@
 {
   "id": "blog_id",
   "title": "Moj blog 2",
+  "authors": [
+    {
+      "id": "author_10",
+      "type": "Entry"
+    },
+    {
+      "id": "author_12",
+      "type": "Entry"
+    }
+  ],
   "posts": [
     {
       "id": "post_1",

@@ -48,9 +48,11 @@ module Contentful
 
         it 'valid blog entry' do
           blog = JSON.parse(File.read('spec/fixtures/blog/entries/blog/blog_1.json'))
-          expect(blog.count).to eq 5
+          expect(blog.count).to eq 6
           expect(blog['id']).to eq 'blog_id'
           expect(blog['title']).to eq 'Moj blog 2'
+          expect(blog['authors'].count).to eq 2
+          expect(blog['authors'].first).to include('id' => 'author_10', 'type' => 'Entry')
           expect(blog['posts'].count).to eq 7
           expect(blog['posts'].first).to include('id' => 'post_1', 'type' => 'Entry')
           expect(blog['categories'].count).to eq 4

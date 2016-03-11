@@ -9,13 +9,22 @@
     <wp:wxr_version>1.2</wp:wxr_version>
     <wp:base_site_url>http://wordpress.com/</wp:base_site_url>
     <wp:base_blog_url>http://szpryc.wordpress.com</wp:base_blog_url>
-    <wp:wp_author>
+    <wp:author>
+      <wp:author_id>10</wp:author_id>
       <wp:author_login>szpryc</wp:author_login>
       <wp:author_email>komarpro@gmail.com</wp:author_email>
       <wp:author_display_name><![CDATA[szpryc]]></wp:author_display_name>
       <wp:author_first_name><![CDATA[]]></wp:author_first_name>
       <wp:author_last_name><![CDATA[]]></wp:author_last_name>
-    </wp:wp_author>
+    </wp:author>
+    <wp:author>
+      <wp:author_id>12</wp:author_id>
+      <wp:author_login>testytesterson</wp:author_login>
+      <wp:author_email>testy.testerson@gmail.com</wp:author_email>
+      <wp:author_display_name><![CDATA[Testy Testerson]]></wp:author_display_name>
+      <wp:author_first_name><![CDATA[Testy]]></wp:author_first_name>
+      <wp:author_last_name><![CDATA[Testerson]]></wp:author_last_name>
+    </wp:author>
     <wp:category>
       <wp:term_id>14786</wp:term_id>
       <wp:category_nicename>bez-kategorii</wp:category_nicename>

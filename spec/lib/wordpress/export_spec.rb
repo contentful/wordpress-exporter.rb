@@ -19,7 +19,7 @@ module Contentful
 
         it 'export_blog' do
           @exporter.export_blog
-          expect(Dir.glob('spec/fixtures/blog/**/*').count).to eq 23
+          expect(Dir.glob('spec/fixtures/blog/**/*').count).to eq 26
         end
       end
     end
