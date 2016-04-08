@@ -1,6 +1,9 @@
 # Change Log
 
 ## Master
+### Fixed
+* Author added
+* Default content model structure now working as intended for Author
 
 ## 0.1.0
 ### Fixed

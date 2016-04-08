@@ -65,8 +65,8 @@
       "content": "Text",
       "Author": {
         "id": "author",
-        "type": "Link",
-        "link_type": "Entry"
+        "link": "Link",
+        "type": "Entry"
       },
       "Tags": {
         "id": "tags",
