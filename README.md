@@ -76,25 +76,10 @@ Use the [generic-importer](https://github.com/contentful/generic-importer.rb) to
 
     ```
 
-6. Use the [contentful-importer](https://github.com/contentful/generic-importer.rb) to import the content to [contentful.com](https://www.contentful.com)
+6. Use the [contentful-importer](https://github.com/contentful/contentful-importer.rb) to import the content to [contentful.com](https://www.contentful.com)
 
 7. Add you organization id and the access token to your `settings.yml`
 
-8. Next we import the content model (the collection of content types), make sure you add the new created space id to your `settings.yml` file.
+8. Add the new created space id to your `settings.yml` file.
 
-   ```bash
-   contentful-importer --config-file settings.yml --import-content-types --space_name my-blog
-   ```
-
-9. We use the following command to import our entries and assets:
-
-   ```bash
-   contentful-importer --config-file settings.yml --import
-   ```
-
-10. And finally publish the entries and assets:
-
-    ```bash
-    contentful-importer --config-file settings.yml --publish-entries
-    contentful-importer --config-file settings.yml --publish-assets
-    ```
+9. Now follow the steps (starting from step 3) of our [contentful-importer guide](https://github.com/contentful/contentful-importer.rb#step-by-step) to publish your content.
