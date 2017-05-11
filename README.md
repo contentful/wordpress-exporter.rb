@@ -1,6 +1,10 @@
 Wordpress to Contentful Exporter
 =================
 
+> **Note**: **DEPRECATED** This tool is no longer officially supported as of May 11th, 2017.
+> You can feel free to use it, fork it and patch it for your own needs.
+> Downloads from RubyGems will still be available.
+
 ## Description
 This adapter will allow you to extract content from a WordPress Blog and prepare it to be imported to [Contentful](https://wwww.contentful.com).
 
