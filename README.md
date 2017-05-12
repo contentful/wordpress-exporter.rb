@@ -1,7 +1,7 @@
 Wordpress to Contentful Exporter
 =================
 
-> **Note**: **DEPRECATED** This tool is no longer officially supported as of May 11th, 2017.
+> **Note**: This tool is no longer officially supported as of May 11th, 2017.
 > You can feel free to use it, fork it and patch it for your own needs.
 > Downloads from RubyGems will still be available.
 
